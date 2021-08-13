@@ -72,6 +72,10 @@ img {
 a {
     text-decoration: none;
 }
+p {
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+}
 
 /* header section */
 
@@ -88,10 +92,10 @@ a {
 header {
     background-image: url(images/desktop/image-header.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom center;
+    background-size:cover;
+    background-position: center center;
     width: 100%;
-    height: 600px;
+    height: 700px;
 
 
 }
@@ -139,7 +143,7 @@ header nav {
 
 .banner{
     width: 100%;
-    height: 400px;
+    height: 600px;
     color: white;
     display: flex;
     align-items: center;
@@ -150,6 +154,7 @@ header nav {
     text-transform: uppercase;
     letter-spacing: 10px;
     margin: 1em 0;
+    font-size: 52px;
 }
 
 .banner-arrow img {
@@ -157,9 +162,94 @@ header nav {
     margin: 0 auto;
 
 }
+/* main content section */
 
 
 
+.main-content h2 {
+    font-size: 40px; 
+    color: hsl(212, 27%, 19%); 
+    
+}
+.main-content p {
+    color: hsl(232, 10%, 55%);
+    line-height: 30px;
+    margin-bottom: 40px;
+    
+}
+
+/* .main-content a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color:hsl(212, 27%, 19%);
+    font-family: 'Fraunces', serif;
+    font-size: 18px;  
+} */
+ 
+.btn {
+    text-transform: uppercase;
+    text-decoration: none;
+    color:hsl(212, 27%, 19%);
+    font-family: 'Fraunces', serif;
+    font-size: 18px; 
+    position: relative;
+}
+
+.btn::after{
+    content: '';
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 100px;
+    z-index: -1;
+}
+
+.btn:hover{
+    background-color: hsl(51, 100%, 49%);
+}
+
+/* .btn ::after {
+    content: '';
+    width: 100%;
+    height: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 100px;
+    z-index: -1;
+} 
+
+.btn-yellow ::after {
+    background-color: hsl(51, 100%, 49%);
+} */
 
 
+.container-1 {
+    display: flex;
+    align-items: center;
+   
+
+}
+.container-2 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    
+}
+
+.text-1, .text-2 {
+    width: 50%;
+    padding: 0 7em 0 7em;
+    text-align: left;
+   
+}
+.img-1, .img-2{
+    width: 50%;
+}
+.img-1 img, .img-2 img {
+   object-fit: cover;
+   width: 100%;
+}
 

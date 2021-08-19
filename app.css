@@ -51,6 +51,7 @@ We provide the required social icons. But, if you prefer, you can use a font ico
 
 * {
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 html {
@@ -58,17 +59,17 @@ html {
     font-size: 18px;
 }
 
-h1, h2 {
+h1, h2, h3{
     margin-bottom: 1em;
 }
 
 h1, h2, h3 {
     font-family: 'Fraunces', serif;
 }
-
 img {
     display: block;
 }
+
 a {
     text-decoration: none;
 }
@@ -100,23 +101,25 @@ header {
 
 }
 
-header nav {
-    position: absolute;
+.nav {
+    
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    padding: 25px;
+    align-items: center;
+    padding: 25px;    
 
 }
 
 .nav-menu {
-    width: 40%;
+   
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     list-style: none;
-    text-decoration: none;
+    
 } 
+
+.menu-item {
+    margin: 20px;
+}
 
 .menu-item a{
     cursor: pointer;
@@ -163,8 +166,74 @@ header nav {
 
 }
 /* main content section */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-width: 100vh;
+}
+.main-content h2 {
+    font-size: 36px;
+}
+
+.box-4 {
+    grid-column: 2;
+    grid-row: 1;
+}
+.content-img {
+    width: 100%;
+    
+}
+
+.content-text {
+    align-self: center;
+    padding: 0 15%;
+}
+.content-text p {
+    color: hsl(232, 10%, 55%);
+    line-height: 30px;
+    margin-bottom: 2em;
+}
+
+/* read more button */
+.btn {
+    text-transform: uppercase;
+    text-decoration: none;
+    color:hsl(212, 27%, 19%);
+    font-family: 'Fraunces', serif;
+    display: block;
+    width: fit-content;    
+}
+
+.btn div {
+    height: 8px;
+    position: relative;
+    top: -8px;
+    opacity: 1;
+    border-radius: 6px;
+    z-index: -1;   
+}
+
+.btn-yellow:hover div {
+    background-color: hsl(51, 100%, 49%)
+}
+.btn-red:hover div {
+    background-color: hsl(7, 99%, 70%) ;
+}
+
+.merged-article {
+    position: relative;
+}
+.merged-text {
+    color: #24554A;
+    position: absolute;
+    top: 60%;
+    text-align: center;
+    padding: 0 15%;  
+    width: 100%;
+}
 
 
+/* 
 
 .main-content h2 {
     font-size: 40px; 
@@ -178,78 +247,327 @@ header nav {
     
 }
 
-/* .main-content a {
-    text-transform: uppercase;
-    text-decoration: none;
-    color:hsl(212, 27%, 19%);
-    font-family: 'Fraunces', serif;
-    font-size: 18px;  
-} */
+.text-1, .text-2 {
+    width: 50%;
+    padding: 0 5em;
+    text-align: left;
+   
+}
+.img-1, .img-2{
+    width: 50%;
+    
+}
+.img-1 img, .img-2 img {
+   object-fit: cover;
+   float: none;
+   width: 100%;
+}
+
+/* Transform your brand container 
+.container-1 {
+    display: flex;
+    align-items: center;
+}
+/* Stand out to right container 
+.container-2 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;    
+}
  
+/* read more button 
 .btn {
     text-transform: uppercase;
     text-decoration: none;
     color:hsl(212, 27%, 19%);
     font-family: 'Fraunces', serif;
     font-size: 18px; 
+    display: block;
+    width: fit-content;    
+}
+
+.btn div {
+    height: 8px;
     position: relative;
+    top: -8px;
+    opacity: 1;
+    border-radius: 6px;
+    z-index: -1;   
 }
 
-.btn::after{
-    content: '';
-    width: 100%;
-    height: 10px;
+.btn-yellow:hover div {
+    background-color: hsl(51, 100%, 49%)
+}
+.btn-red:hover div {
+    background-color: hsl(7, 99%, 70%) ;
+}
+
+/* Graphic design and Photography section 
+
+.merged-article {
+    display: flex;
+     
+}
+.merged-article h3 {
+    font-size: 28px;
+}
+.merged-article p, .merged-article h3{
+    color: #24554A;
+    padding: 16px 20%;
+}
+.container-3, .container-4 {
+    position: relative;
+    width: 50%;
+    text-align: center;   
+}
+
+.text-3, .text-4{
     position: absolute;
-    left: 0;
-    bottom: 0;
-    border-radius: 100px;
-    z-index: -1;
+    top: 60%; 
 }
 
-.btn:hover{
-    background-color: hsl(51, 100%, 49%);
-}
-
-/* .btn ::after {
-    content: '';
+.img-3, .img-4 {
+    object-fit: cover;
     width: 100%;
-    height: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    border-radius: 100px;
-    z-index: -1;
-} 
-
-.btn-yellow ::after {
-    background-color: hsl(51, 100%, 49%);
+    
 } */
 
 
-.container-1 {
-    display: flex;
-    align-items: center;
-   
 
+/* Client testimonials section */
+.testimonial-section * {
+    text-align: center;
+    
 }
-.container-2 {
+.testimonial-section {
+    padding: 8%;
+}
+.title {
+    font-family: 'Fraunces', serif;
+    font-size: 20px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #A7AAAD;
+    margin-bottom: 10%;
+    
+}
+.clients {
     display: flex;
-    flex-direction: row-reverse;
     align-items: center;
     
 }
 
-.text-1, .text-2 {
-    width: 50%;
-    padding: 0 7em 0 7em;
-    text-align: left;
+.testimonial {
+    padding: 15px;
+
+}
+
+.testimonial p {
+    margin: 26px 0 0;
+
+}
+
+.img-container {
+    overflow: hidden;
+    height: 72px;
+    width: 72px;
+    margin: 0 auto;   
+    
+}
+
+.testimonial-section img {
+    border-radius: 80px;
+    height: 100%;
+    
+}
+.comment {
+    color:hsl(213, 9%, 39%);
+}
+.position {
+    font-size: 14px;
+    color: #A7AAAD;
+}
+
+.name {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    font-size: 18px;
+    margin-top: 60px;
+    margin-bottom: 8px;
+}
+
+
+/* footer 4 images section */
+
+.footer-images img {
+    width: 100%;
+    height: 100%; 
+}
+
+.footer-images {
+    display: flex;
+}
+
+
+/* footer logo section */
+.footer-logo {
+    margin-top: 60px;
+    margin-bottom: 24px;
+    
    
 }
-.img-1, .img-2{
-    width: 50%;
+.footer-logo path {
+    fill: #458D7E;
 }
-.img-1 img, .img-2 img {
-   object-fit: cover;
-   width: 100%;
+
+
+/* footer menu section */
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #90D4C6;
+    align-items: center;
 }
+
+.footer-nav ul{
+    list-style: none;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    text-decoration: none;
+}
+
+.footer-nav a{
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    color:#458D7E;
+}
+.footer-nav a:hover {
+    color: white;
+}
+/* footer social links */
+.footer-social-links ul{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    justify-content: space-around;
+}
+.footer-nav li,.footer-social-links li {
+    padding-left: 15%;
+    padding-right: 15%;
+    margin-bottom: 64px;
+    cursor: pointer;
+}
+
+#facebook:hover path, #instagram:hover path,
+#twitter:hover path, #pinterest:hover path {
+    fill: white;
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+.mobile-menu {
+    display: none;
+}
+.mobile-img {
+    display: none;
+    width: 100%;
+    
+}
+
+
+
+/*--------small screen ---------- */
+
+@media (max-width:840px){
+    
+   .nav-menu {
+        display: none;
+   }
+   .mobile-menu {
+       display: block;
+   }
+   .main-content {
+       display: flex;
+       flex-direction: column;
+       
+   }
+   header {
+    background-image: url(images/mobile/image-header.jpg);
+    background-size:cover;
+    width: 100%;
+    height: 80vh;
+    }
+
+
+   .content-text {
+       height: 500px
+   }
+   .content-img {
+        display: none;
+   }
+   .mobile-img {
+        display:block;
+   }
+   
+   
+   .clients {
+       flex-direction: column;
+   }
+
+
+   .main-content {
+       display: flex;
+       flex-direction: column ;
+   }
+   .main-content :nth-child(1){order: 2;}
+   .main-content :nth-child(2){order: 1;}
+   .main-content :nth-child(3){order: 4;}
+   .main-content :nth-child(4){order: 3;}
+   .main-content :nth-child(5){order: 5;}
+   .main-content :nth-child(6){order: 6;}
+   
+   .content-text {
+        text-align: center;
+        padding: 15% 10%;
+        
+    }
+    .content-text p {
+        line-height: 30px;
+    }
+    .content-text h2 {
+        font-size: 32px;
+    } 
+    .btn {
+        margin: 0 auto;
+    }
+    .merged-text {
+        line-height: 27px;
+    }
+    .merged-text p {
+        padding: 16px 8%;
+        color: #24554A;
+    }
+    .merged-text h3 {
+        font-size: 28px;
+    }
+
+    .footer-images {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        
+    }
+}
+
+
 

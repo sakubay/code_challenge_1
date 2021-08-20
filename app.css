@@ -1,71 +1,26 @@
-/*
-# Front-end Style Guide
-
-## Layout
-
-The designs were created to the following widths:
-
-- Mobile: 375px
-- Desktop: 1440px
-
-## Colors
-
-### Primary
-
-- Soft red: hsl(7, 99%, 70%)
-- Yellow: hsl(51, 100%, 49%)
-- Dark desaturated cyan (graphic design text): hsl(167, 40%, 24%)
-- Dark blue (photography text): hsl(198, 62%, 26%)
-- Dark moderate cyan (footer): hsl(168, 34%, 41%)
-
-### Neutral
-
-- Very dark desaturated blue: hsl(212, 27%, 19%)
-- Very dark grayish blue: hsl(213, 9%, 39%)
-- Dark grayish blue: hsl(232, 10%, 55%)
-- Grayish blue: hsl(210, 4%, 67%)
-- White: hsl(0, 0%, 100%)
-
-## Typography
-
-### Body Copy
-
-- Font size: 18px
-
-### Font
-
-- Family: [Barlow](https://fonts.google.com/specimen/Barlow)
-- Weights: 600
-- Family: [Fraunces](https://fonts.google.com/specimen/Fraunces)
-- Weights: 700, 900
-
-## Icons
-
-We provide the required social icons. But, if you prefer, you can use a font icon library. Some suggestions can be found below:
-
-- [Font Awesome](https://fontawesome.com)
-- [IcoMoon](https://icomoon.io)
-- [Ionicons](https://ionicons.com)
-
-*/
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 html {
     width: 100%;
     font-size: 18px;
 }
 
-h1, h2, h3{
+h1,
+h2,
+h3 {
     margin-bottom: 1em;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-family: 'Fraunces', serif;
 }
+
 img {
     display: block;
 }
@@ -73,60 +28,50 @@ img {
 a {
     text-decoration: none;
 }
+
 p {
     font-family: 'Barlow', sans-serif;
     font-size: 18px;
 }
 
+
 /* header section */
 
-/* header {
+.header-container {
     background-image: url(images/desktop/image-header.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: bottom center;
-    width: 100%;
-    height: 500px;
-
-} */
-
-header {
-    background-image: url(images/desktop/image-header.jpg);
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-position: center center;
-    width: 100%;
+    background-position: center bottom;
     height: 700px;
-
-
+    width: 100%;
 }
 
 .nav {
-    
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px;    
-
+    padding: 25px;
 }
 
 .nav-menu {
-   
     display: flex;
     list-style: none;
-    
-} 
+}
 
 .menu-item {
     margin: 20px;
 }
 
-.menu-item a{
+.menu-item a {
     cursor: pointer;
     color: white;
     font-family: 'Barlow', sans-serif;
-    
 }
+
+.item:hover {
+    opacity: 50%;
+}
+
 .contact {
     background-color: white;
     padding: 1em 1.5em;
@@ -135,16 +80,17 @@ header {
     text-transform: uppercase;
     font-family: 'Fraunces', serif !important;
     font-weight: 600;
-} 
-.contact:hover {
-    color: white !important;
-    background-color: rgba(255, 255, 255,0.3);
-    
 }
-    
+
+.contact:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+
 /* banner section */
 
-.banner{
+.banner {
     width: 100%;
     height: 600px;
     color: white;
@@ -163,15 +109,17 @@ header {
 .banner-arrow img {
     width: auto;
     margin: 0 auto;
-
 }
+
+
 /* main content section */
-.main-content {
+
+.main-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    min-width: 100vh;
 }
-.main-content h2 {
+
+.main-container h2 {
     font-size: 36px;
 }
 
@@ -179,29 +127,32 @@ header {
     grid-column: 2;
     grid-row: 1;
 }
+
 .content-img {
     width: 100%;
-    
 }
 
 .content-text {
     align-self: center;
     padding: 0 15%;
 }
+
 .content-text p {
     color: hsl(232, 10%, 55%);
     line-height: 30px;
     margin-bottom: 2em;
 }
 
+
 /* read more button */
+
 .btn {
     text-transform: uppercase;
     text-decoration: none;
-    color:hsl(212, 27%, 19%);
+    color: hsl(212, 27%, 19%);
     font-family: 'Fraunces', serif;
     display: block;
-    width: fit-content;    
+    width: fit-content;
 }
 
 .btn div {
@@ -210,25 +161,27 @@ header {
     top: -8px;
     opacity: 1;
     border-radius: 6px;
-    z-index: -1;   
+    z-index: -1;
 }
 
 .btn-yellow:hover div {
     background-color: hsl(51, 100%, 49%)
 }
+
 .btn-red:hover div {
-    background-color: hsl(7, 99%, 70%) ;
+    background-color: hsl(7, 99%, 70%);
 }
 
 .merged-article {
     position: relative;
 }
+
 .merged-text {
     color: #24554A;
     position: absolute;
     top: 60%;
     text-align: center;
-    padding: 0 15%;  
+    padding: 0 15%;
     width: 100%;
 }
 
@@ -333,15 +286,16 @@ header {
 } */
 
 
-
 /* Client testimonials section */
+
 .testimonial-section * {
     text-align: center;
-    
 }
+
 .testimonial-section {
     padding: 8%;
 }
+
 .title {
     font-family: 'Fraunces', serif;
     font-size: 20px;
@@ -350,40 +304,37 @@ header {
     font-weight: 900;
     color: #A7AAAD;
     margin-bottom: 10%;
-    
 }
+
 .clients {
     display: flex;
     align-items: center;
-    
 }
 
 .testimonial {
     padding: 15px;
-
 }
 
 .testimonial p {
     margin: 26px 0 0;
-
 }
 
 .img-container {
     overflow: hidden;
     height: 72px;
     width: 72px;
-    margin: 0 auto;   
-    
+    margin: 0 auto;
 }
 
 .testimonial-section img {
     border-radius: 80px;
     height: 100%;
-    
 }
+
 .comment {
-    color:hsl(213, 9%, 39%);
+    color: hsl(213, 9%, 39%);
 }
+
 .position {
     font-size: 14px;
     color: #A7AAAD;
@@ -402,7 +353,7 @@ header {
 
 .footer-images img {
     width: 100%;
-    height: 100%; 
+    height: 100%;
 }
 
 .footer-images {
@@ -411,12 +362,12 @@ header {
 
 
 /* footer logo section */
+
 .footer-logo {
     margin-top: 60px;
     margin-bottom: 24px;
-    
-   
 }
+
 .footer-logo path {
     fill: #458D7E;
 }
@@ -431,7 +382,7 @@ header {
     align-items: center;
 }
 
-.footer-nav ul{
+.footer-nav ul {
     list-style: none;
     display: flex;
     width: 100%;
@@ -439,33 +390,40 @@ header {
     text-decoration: none;
 }
 
-.footer-nav a{
+.footer-nav a {
     font-family: 'Barlow', sans-serif;
     font-size: 18px;
-    color:#458D7E;
+    color: #458D7E;
 }
+
 .footer-nav a:hover {
     color: white;
 }
+
+
 /* footer social links */
-.footer-social-links ul{
+
+.footer-social-links ul {
     display: flex;
     list-style: none;
     width: 100%;
     justify-content: space-around;
 }
-.footer-nav li,.footer-social-links li {
+
+.footer-nav li,
+.footer-social-links li {
     padding-left: 15%;
     padding-right: 15%;
     margin-bottom: 64px;
     cursor: pointer;
 }
 
-#facebook:hover path, #instagram:hover path,
-#twitter:hover path, #pinterest:hover path {
+#facebook:hover path,
+#instagram:hover path,
+#twitter:hover path,
+#pinterest:hover path {
     fill: white;
 }
-
 
 .attribution {
     font-size: 11px;
@@ -476,78 +434,116 @@ header {
     color: hsl(228, 45%, 44%);
 }
 
-.mobile-menu {
-    display: none;
-}
 .mobile-img {
     display: none;
     width: 100%;
-    
 }
 
+.mobile-menu {
+    display: none;
+}
+
+#mobile-icon {
+    display: none;
+}
 
 
 /*--------small screen ---------- */
 
-@media (max-width:840px){
-    
-   .nav-menu {
-        display: none;
-   }
-   .mobile-menu {
-       display: block;
-   }
-   .main-content {
-       display: flex;
-       flex-direction: column;
-       
-   }
-   header {
-    background-image: url(images/mobile/image-header.jpg);
-    background-size:cover;
-    width: 100%;
-    height: 80vh;
+@media all and (max-width:840px) {
+    .header-container {
+        background-image: url(images/mobile/image-header.jpg);
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center bottom;
     }
-
-
-   .content-text {
-       height: 500px
-   }
-   .content-img {
+    /* --hide desktop menu-- */
+    .nav-menu {
         display: none;
-   }
-   .mobile-img {
-        display:block;
-   }
-   
-   
-   .clients {
-       flex-direction: column;
-   }
-
-
-   .main-content {
-       display: flex;
-       flex-direction: column ;
-   }
-   .main-content :nth-child(1){order: 2;}
-   .main-content :nth-child(2){order: 1;}
-   .main-content :nth-child(3){order: 4;}
-   .main-content :nth-child(4){order: 3;}
-   .main-content :nth-child(5){order: 5;}
-   .main-content :nth-child(6){order: 6;}
-   
-   .content-text {
+    }
+    /* --show mobile menu icon-- */
+    #mobile-icon {
+        display: block;
+    }
+    #mobile-icon:hover {
+        opacity: 50%;
+    }
+    /* --show mobile menu-- */
+    .mobile-menu-container {
+        display: block;
+        padding: 1% 5%;
+        position: fixed;
+        width: 100%;
+    }
+    .mobile-menu {
+        list-style: none;
+        background-color: white;
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        font-size: 20px;
+        line-height: 2;
+    }
+    .mobile-menu a {
+        color: hsl(232, 10%, 55%);
+    }
+    .contact {
+        background-color: hsl(51, 100%, 49%);
+    }
+    .contact:hover {
+        opacity: 50%;
+    }
+    /* --banner text-- */
+    .banner-text {
+        font-size: 36px;
+        text-align: center;
+    }
+    /* --content section-- */
+    .content-text {
         text-align: center;
         padding: 15% 10%;
-        
+        height: 500px
     }
     .content-text p {
         line-height: 30px;
     }
     .content-text h2 {
         font-size: 32px;
-    } 
+    }
+    /* --desktop image hidden-- */
+    .content-img {
+        display: none;
+    }
+    /* --show mobile image-- */
+    .mobile-img {
+        display: block;
+    }
+    .clients {
+        flex-direction: column;
+    }
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    }
+    .main-container :nth-child(1) {
+        order: 2;
+    }
+    .main-container :nth-child(2) {
+        order: 1;
+    }
+    .main-container :nth-child(3) {
+        order: 4;
+    }
+    .main-container :nth-child(4) {
+        order: 3;
+    }
+    .main-container :nth-child(5) {
+        order: 5;
+    }
+    .main-container :nth-child(6) {
+        order: 6;
+    }
     .btn {
         margin: 0 auto;
     }
@@ -561,13 +557,9 @@ header {
     .merged-text h3 {
         font-size: 28px;
     }
-
+    /* footer section  */
     .footer-images {
         display: grid;
         grid-template-columns: 50% 50%;
-        
     }
 }
-
-
-
